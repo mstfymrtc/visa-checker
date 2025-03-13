@@ -40,6 +40,7 @@ export async function fetchAppointments(): Promise<VisaAppointment[]> {
       axios.get<VisaAppointment[]>(config.api.visaApiUrl)
     );
     console.log(response.status);
+    console.log(response.data);
     return response.data;
   } catch (error) {
     if (error instanceof AxiosError) {
